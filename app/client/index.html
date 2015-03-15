@@ -1,9 +1,117 @@
 <html>
     <head>
-        <title></title>
+        <title>Yeah</title>
+        <link rel="stylesheet" type="text/css" href="bower_components/pure/base.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/pure/grids.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
-        Something is rendering
+        <main>
+            <section id='background'>
+            </section>
+
+            <svg>
+              <defs>
+                <linearGradient id="gradient" x1="0" y1="00%" x2 ="0" y2="100%">
+                  <stop stop-color="black" offset="0"/>
+                  <stop stop-color="white" offset="1"/>
+                </linearGradient>
+
+                <mask id="masking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+                  <rect width="1" height="1" fill="url(#gradient)" />
+                </mask>
+              </defs>
+            </svg>
+
+
+            <div id='title-grid-container' class='mask'>
+                <div id='title-grid-content'>
+                    <div class='title-grid-row'>
+                        <div class='title-grid-row-focus-area' focusable></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                    </div>
+
+                    <div class='title-grid-row'>
+                        <div class='title-grid-row-focus-area' focusable></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                    </div>
+
+                    <div class='title-grid-row'>
+                        <div class='title-grid-row-focus-area' focusable></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                        <div class='title-grid-row-item'></div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
-    <script src='index.js'></script>
+    <script data-main='main.js' src='bower_components/requirejs/require.js'></script>
 </html>

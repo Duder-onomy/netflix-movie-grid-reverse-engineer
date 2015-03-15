@@ -1,0 +1,57 @@
+html {
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+#title-grid-container {
+    position: absolute;
+    top : 250px;
+}
+
+#title-grid-content {
+
+}
+
+
+.title-grid-row {
+    border : 1px solid lime;
+    position: relative;
+
+    height : 150px;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.title-grid-row-item {
+    display: inline-block;
+    height : 150px;
+    width : 100px;
+    outline : 1px solid lime;
+    margin-left : 20px;
+}
+
+.title-grid-row-focus-area {
+    border: 1px solid blue;
+    position: absolute;
+
+    height: 170px;
+    width: 120px;
+    left: 133px;
+    top: 14px;
+}
+
+.mask {
+    mask : url(#masking);
+}

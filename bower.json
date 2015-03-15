@@ -13,6 +13,8 @@
     "tests"
   ],
   "dependencies": {
-    "magic-focus-finder": "~1.2.3"
+    "magic-focus-finder": "~1.2.3",
+    "pure": "~0.6.0",
+    "requirejs": "~2.1.16"
   }
 }
