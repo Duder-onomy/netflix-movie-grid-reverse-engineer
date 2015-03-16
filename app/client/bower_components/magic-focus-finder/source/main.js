@@ -147,24 +147,26 @@ define(['lodash'], function (_) {
     }
 
     function _eventManager(event) {
-        var mappedKey;
+        var mappedKey = _.findWhere(internal.config.keymap, { code : event.keyCode });
 
         if(!internal.canMove) {
             return;
         }
 
-        _recalculateDynamicElementPositions();
+        if(mappedKey) { // its a key we care about
+            _recalculateDynamicElementPositions();
 
-        if(internal.currentlyFocusedElement) {
-            mappedKey = _.findWhere(internal.config.keymap, { code : event.keyCode });
-
-            if(mappedKey && internal.currentlyFocusedElement.magicFocusFinderDirectionOverrides[mappedKey.direction]) {
-                setCurrent(internal.currentlyFocusedElement.magicFocusFinderDirectionOverrides[mappedKey.direction]);
-            } else if(mappedKey) {
-                internal.move[mappedKey.direction]();
+            if(internal.currentlyFocusedElement) {
+                if(internal.currentlyFocusedElement.magicFocusFinderDirectionOverrides[mappedKey.direction]) {
+                    _fireHTMLEvent(internal.currentlyFocusedElement, 'overridden-focus-to-'+ internal.currentlyFocusedElement.magicFocusFinderDirectionOverrides[mappedKey.direction]);
+                    setCurrent(internal.currentlyFocusedElement.magicFocusFinderDirectionOverrides[mappedKey.direction]);
+                } else {
+                    _fireHTMLEvent(internal.currentlyFocusedElement, 'moving-focus-'+ mappedKey.direction);
+                    internal.move[mappedKey.direction]();
+                }
+            } else {
+                _setDefaultFocus();
             }
-        } else {
-            _setDefaultFocus();
         }
     }
 
